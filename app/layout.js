@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/Header";
+import { dark } from "@clerk/themes";
 
 
 const inter=Inter({subsets:["latin"]});
@@ -16,7 +17,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider appearance={{
+      baseTheme:dark
+    }}>
       <html lang="en" suppressHydrationWarning>
         <body
           className={`${inter.className}`}
@@ -31,6 +34,7 @@ export default function RootLayout({ children }) {
             <Header/>
 
             <main className="min-h-screen">{children}</main>
+            
 
             {/* footer */}
             <footer className="bg-muted/55 py-12">

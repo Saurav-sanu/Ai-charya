@@ -40,7 +40,7 @@ const Header = () => {
         <Link href="/">
           <Image
             src="/logo.png"
-            alt="AachAIrya Logo"
+            alt="AIcharya Logo"
             width={120}
             height={40}
             className="py-1 w-auto object-contain"
@@ -88,7 +88,7 @@ const Header = () => {
                 {/* <DropdownMenuSeparator /> */}
 
                 <DropdownMenuItem>
-                  <Link href="/inteview" className="flex items-center gap-2">
+                  <Link href="/interview" className="flex items-center gap-2">
                     <GraduationCap className="h-4 w-4" />
                     <span>Interview Prep</span>
                   </Link>
