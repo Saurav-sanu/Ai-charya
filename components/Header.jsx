@@ -1,4 +1,3 @@
-"use client";
 
 import React from "react";
 import {
@@ -24,12 +23,13 @@ import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
+import { checkUser } from "@/lib/checkUser";
 
-const Header = () => {
+const Header = async () => {
+  await checkUser();
+
   return (
     <header
       className="fixed top-0 w-full border-b bg-background/80 
@@ -103,17 +103,16 @@ const Header = () => {
             </SignInButton>
           </SignedOut>
 
-
           <SignedIn>
-            <UserButton 
-            appearance={{
-              elements:{
-                avatarBox:'w-10 h-10',
-                userButtonPopoverCard:"shadow-xl",
-                userPreviewMainIdentifier:"font-semibold"
-              }
-            }}
-            afterSignOutUrl="/"
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: "w-10 h-10",
+                  userButtonPopoverCard: "shadow-xl",
+                  userPreviewMainIdentifier: "font-semibold",
+                },
+              }}
+              afterSignOutUrl="/"
             />
           </SignedIn>
         </div>
