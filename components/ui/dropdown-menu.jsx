@@ -28,7 +28,7 @@ function DropdownMenuContent({
   className,
   sideOffset = 4,
   ...props
-}) {
+}) { 
   return (
     <DropdownMenuPrimitive.Portal>
       <DropdownMenuPrimitive.Content
