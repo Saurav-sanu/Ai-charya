@@ -52,16 +52,6 @@ AI-Charya is a full-stack web application that helps users craft better resumes,
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots here:
-> - Resume Builder UI
-> - AI-enhanced entry
-> - Quiz page
-> - Performance Chart
-> - Industry Insight Dashboard
-
----
 
 ## 🧪 Local Development
 
