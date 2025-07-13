@@ -49,11 +49,7 @@ const HeroSection = () => {
               Get Started
             </Button>
           </Link>
-          <Link href="/dashboard">
-            <Button className="px-8" size="lg" variant="outline">
-              Get Started
-            </Button>
-          </Link>
+
         </div>
 
         <div className="hero-image-wrapper mt-5 md:mt-0">
