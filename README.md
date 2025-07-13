@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧠 AI-Charya – AI-Powered Career & Resume Assistant
 
-## Getting Started
+https://ai-charya.vercel.app/
 
-First, run the development server:
+AI-Charya is a full-stack web application that helps users craft better resumes, explore industry insights, and improve their career prospects with the power of AI. Built with **Next.js 14 App Router**, **Google Gemini AI**, and **Prisma ORM**, it provides an intuitive and intelligent experience.
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication
+- Integrated **Clerk** for seamless user sign-in/sign-up.
+- Server-side user validation using `auth()`.
+
+### 📝 Resume Builder
+- Dynamic form sections for **Contact Info**, **Experience**, **Projects**, **Education**, and **Skills**.
+- Integrated **Google Gemini 1.5 Flash** to improve resume descriptions.
+- React Hook Form + Zod used for schema-based validation and form control.
+- Resume auto-saves to database using **Prisma upsert**.
+
+### 📈 Quiz and Performance Tracking
+- AI-generated quizzes tailored to the user's industry.
+- Scores stored and tracked over time.
+- Interactive **line chart** using **Recharts** to visualize performance.
+
+### 📊 Industry Insights
+- Upon onboarding, AI generates:
+  - Salary ranges for roles
+  - Market outlook
+  - Growth rate
+  - Top & recommended skills
+- Insights are stored and reused to avoid redundant API calls.
+
+### 🌐 Full-stack Integration
+- **PostgreSQL** via Prisma for database.
+- **Server Actions** used for secure DB/AI logic.
+- Smart caching with `revalidatePath()` and fallback states.
+- UI feedback with **Sonner** toasts.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category        | Tools / Libraries                                |
+|----------------|--------------------------------------------------|
+| **Frontend**    | Next.js 14, React, Tailwind CSS, Shadcn UI       |
+| **Backend**     | Prisma ORM, PostgreSQL, Clerk, Google Gemini AI  |
+| **AI**          | Google Generative AI – Gemini 1.5 Flash          |
+| **Charts**      | Recharts                                         |
+| **Forms**       | React Hook Form, Zod                             |
+| **Deployment**  | Vercel                                           |
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots here:
+> - Resume Builder UI
+> - AI-enhanced entry
+> - Quiz page
+> - Performance Chart
+> - Industry Insight Dashboard
+
+---
+
+## 🧪 Local Development
 
 ```bash
+# 1. Clone the repo
+git clone https://github.com/saurav-sanu/ai-charya.git
+cd ai-charya
+
+# 2. Install dependencies
+npm install
+
+# 3. Set environment variables
+touch .env
+
+# Add the following:
+# CLERK_SECRET_KEY=
+# CLERK_PUBLISHABLE_KEY=
+# GEMINI_API_KEY=
+# DATABASE_URL=postgresql://...
+
+# 4. Run Prisma migrations
+npx prisma generate
+npx prisma migrate dev
+
+# 5. Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🙋‍♂️ Author
+Saurav Kumar
+Connect on LinkedIn
+Portfolio Projects
