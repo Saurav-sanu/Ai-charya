@@ -20,6 +20,8 @@ export async function generateQuiz() {
   });
 
   if (!user) throw new Error("User not found");
+  if (!user.industry) throw new Error("User has no industry set. Please complete onboarding first.");
+
 
   const prompt = `
     Generate 10 technical interview questions for a ${
